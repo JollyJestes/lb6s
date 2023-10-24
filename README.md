@@ -7,5 +7,6 @@
 
 Замечание: метод toString() переопределяется во всех классах.
 
+![image](https://github.com/JollyJestes/lb6s/assets/93829971/712a99d8-92a1-4d9f-977c-b110988e887d)
 
 Создайте интерфейс `ICoffeeMachine` с методами `void BrewCoffee()`, `void AddMilk()`, и `void AddSugar()`. Реализуйте этот интерфейс в абстрактном классе `CoffeeMachine` с readonly полем `string brand` и конструктором с init спецификатором. Создайте класс `EspressoMachine`, который наследуется от `CoffeeMachine` и реализует интерфейс `ICoffeeMachine`.
