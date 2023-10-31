@@ -4,8 +4,8 @@
     {
         List<ICoffeeMachine> coffeeMachines = new List<ICoffeeMachine>
         {
-            new EspressoMachine("ABC Brand"),
-            
+            new EspressoMachine("Model1", 2023, true, 1000, 500, 200),
+            new EspressoMachine("Model2", 2022, false, 800, 400, 150),
         };
 
         // Проверка на null перед выполнением операций
@@ -21,7 +21,7 @@
         }
 
         // Добавление нового элемента после проверки на null
-        ICoffeeMachine newMachine = new EspressoMachine("XYZ Brand");
+        ICoffeeMachine newMachine = new EspressoMachine("Model3", 2021, true, 900, 450, 180);
         if (newMachine != null)
         {
             coffeeMachines.Add(newMachine);
@@ -30,7 +30,7 @@
         // Редактирование элемента (пример редактирования первого элемента)
         if (coffeeMachines.Count > 0 && coffeeMachines[0] != null)
         {
-            coffeeMachines[0] = new EspressoMachine("Updated Brand");
+            ((EspressoMachine)coffeeMachines[0]).WaterCapacity = 950;
         }
 
         // Удаление случайного элемента из списка

@@ -1,10 +1,14 @@
 ﻿public abstract class CoffeeMachine : ICoffeeMachine
 {
-    protected readonly string brand;
+    public string Model { get; set; }
+    public int YearOfManufacture { get; set; }
+    public bool IsAutomatic { get; set; }
 
-    protected CoffeeMachine(string brand)
+    protected CoffeeMachine(string model, int yearOfManufacture, bool isAutomatic)
     {
-        this.brand = brand;
+        Model = model;
+        YearOfManufacture = yearOfManufacture;
+        IsAutomatic = isAutomatic;
     }
 
     public abstract void BrewCoffee();
@@ -13,6 +17,6 @@
 
     public override string ToString()
     {
-        return $"Coffee Machine: {brand}";
+        return $"Coffee Machine: {Model}, Year: {YearOfManufacture}, Automatic: {IsAutomatic}";
     }
 }
